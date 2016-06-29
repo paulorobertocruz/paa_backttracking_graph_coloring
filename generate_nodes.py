@@ -55,6 +55,9 @@ def popula_conection(d = 0):
             return
         popula_conection(d+1)
 
+for n in range(len(nodes)):
+    nodes[n] = n
+
 
 filename = "grafos/mapa_" + str(quantidade) + "_" + str(max_conections) + ".py"
 arquivo = open(filename,"w")
