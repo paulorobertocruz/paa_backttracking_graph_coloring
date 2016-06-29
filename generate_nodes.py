@@ -1,4 +1,13 @@
 import random
+import sys
+
+if len(sys.argv) < 3:
+    print("argumentos:python generate_nodes.py numero_de_nos numero_maximo_de_conexões")
+    exit()
+
+quantidade = int(sys.argv[1])
+max_conections = int(sys.argv[2])
+
 def get_number_conection(max_conections):
     p = random.randint(1,10)
     if p > 7:
@@ -26,12 +35,8 @@ def conecta():
     else:
         return False
 
-quantidade = 15
-max_conections = 20
-
 nodes = [get_number_conection(max_conections) for _ in range(quantidade)]
 vertex = [[0 for _ in range(quantidade)] for _ in range(quantidade)]
-print("nodes = ", nodes)
 
 #self conecta
 for n in range(len(nodes)):
@@ -57,10 +62,6 @@ arquivo.write("nodes = " + str(nodes) + "\n")
 
 popula_conection()
 
-
-
 arquivo.write("vertex = " + str(vertex) + "\n")
-# for v in vertex:
-#     print(v)
 
 arquivo.close()

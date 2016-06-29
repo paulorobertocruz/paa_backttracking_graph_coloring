@@ -14,13 +14,13 @@ class Grafo:
 
     def getCor(self,i):
         colors = {
-            1:"red",
-            2:"green",
-            3:"blue",
-            4:"white",
-            5:"yellow",
+            1:"r",
+            2:"g",
+            3:"b",
+            4:"w",
+            5:"y",
         }
-        return colors.get(i, "black")
+        return colors.get(i,"k")
 
     def setVertex(self, vertex):
         self.vertex = vertex
@@ -47,19 +47,3 @@ class Grafo:
                 else:
                     return True
         return False
-
-
-
-nodes = ["a","b","c","d"]
-vertex = [[1,1,0,1],[1,1,1,1],[0,1,1,1],[1,1,1,1]]
-
-import grapth_star
-
-a = Grafo()
-a.setNodes(nodes)
-a.setVertex(vertex)
-
-if not a.colora_node(0):
-    print("deu merda")
-else:
-    print(a.x)
