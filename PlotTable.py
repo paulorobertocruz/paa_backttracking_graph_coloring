@@ -7,13 +7,19 @@ from backtrack import Grafo
 if len(sys.argv) < 2:
     exit("ta faltando coisa")
 
+m = 3
+if len(sys.argv) == 3:
+    m = int(sys.argv[2])
+
 filename = sys.argv[1]
+
 
 grafos = importlib.import_module("grafos."+filename)
 
 mapa = Grafo()
 mapa.setNodes(grafos.nodes)
 mapa.setVertex(grafos.vertex)
+mapa.setM(m)
 
 nodes = grafos.nodes
 vertex = grafos.vertex
