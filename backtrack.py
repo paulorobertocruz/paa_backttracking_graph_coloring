@@ -19,6 +19,16 @@ class Grafo:
             3:"b",
             4:"w",
             5:"y",
+            6:"#8B008B",
+            7:"#CAE1FF",
+            8:"#00F5FF",
+            9:"#00FF7F",
+            10:"#00FF00",
+            11:"#FFA500",
+            12:"#AAAAAA",
+            13:"#8E8E38",
+            14:"#FF1493",
+            15:"#CD69C9",
         }
         return colors.get(self.x[i],"k")
 
