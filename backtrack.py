@@ -20,7 +20,7 @@ class Grafo:
             4:"w",
             5:"y",
         }
-        return colors.get(i,"k")
+        return colors.get(self.x[i],"k")
 
     def setVertex(self, vertex):
         self.vertex = vertex
