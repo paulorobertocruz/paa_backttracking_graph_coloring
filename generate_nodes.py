@@ -55,6 +55,8 @@ def popula_conection(d = 0):
             return
         popula_conection(d+1)
 
+popula_conection()
+
 for n in range(len(nodes)):
     nodes[n] = n
 
@@ -63,7 +65,6 @@ filename = "grafos/mapa_" + str(quantidade) + "_" + str(max_conections) + ".py"
 arquivo = open(filename,"w")
 arquivo.write("nodes = " + str(nodes) + "\n")
 
-popula_conection()
 
 arquivo.write("vertex = " + str(vertex) + "\n")
 
