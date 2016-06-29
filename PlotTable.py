@@ -36,7 +36,7 @@ for i in range(0,len(grafos.vertex)):
 			G.add_edge(grafos.nodes[i],grafos.nodes[j])
 
 for i in range(0,len(grafos.nodes)):
-	G.node[listaNodes[i]]['color'] = mapa.getCor(i)
+	G.node[grafos.nodes[i]]['color'] = mapa.getCor(i)
 	nx.draw(G,pos,node_size = 1000,nodelist = grafos.nodes[i],node_color = color[mapa.getCor(i)])
 
 
