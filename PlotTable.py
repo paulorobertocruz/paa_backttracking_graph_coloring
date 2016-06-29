@@ -7,9 +7,12 @@ G = nx.Graph()
 
 nodes = ["a","b","c","d"]
 vertex = [[1,1,0,1],[1,1,1,1],[0,1,1,1],[1,1,1,1]]
+
 mapa = Grafo()
+a.setNodes(nodes)
+a.setVertex(vertex)
 mapa.colora_node(0)
-nodes = mapa.x
+
 
 G.add_nodes_from(nodes, color = "y")
 pos = nx.random_layout(G)
