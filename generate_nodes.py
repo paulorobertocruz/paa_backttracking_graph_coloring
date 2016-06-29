@@ -56,7 +56,7 @@ def popula_conection(d = 0):
         popula_conection(d+1)
 
 popula_conection()
-
+chances = list(nodes)
 for n in range(len(nodes)):
     nodes[n] = n
 
@@ -64,6 +64,7 @@ for n in range(len(nodes)):
 filename = "grafos/mapa_" + str(quantidade) + "_" + str(max_conections) + ".py"
 arquivo = open(filename,"w")
 arquivo.write("nodes = " + str(nodes) + "\n")
+arquivo.write("chances = " + str(chances) + "\n")
 
 
 arquivo.write("vertex = " + str(vertex) + "\n")
