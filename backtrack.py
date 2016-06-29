@@ -36,7 +36,7 @@ class Grafo:
 
 
     def colora_node(self, k):
-        print(self.x)
+        #print(self.x)
         for color in range(1, self.m+1):
             if self.is_safe(k,color):
                 self.x[k] = color

@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 import sys
+import importlib
 from backtrack import Grafo
 
 if len(sys.argv) < 2:
@@ -8,7 +9,7 @@ if len(sys.argv) < 2:
 
 filename = sys.argv[1]
 
-grafos = __import__("grafos."+filename, globals(), locals(), [filename, filename], 0)
+grafos = importlib.import_module("grafos."+filename)
 
 mapa = Grafo()
 mapa.setNodes(grafos.nodes)
@@ -20,7 +21,7 @@ vertex = grafos.vertex
 if mapa.colora_node(0):
     print("tudo ok")
 else:
-    print("não deu solução")
+    print("nao deu solução")
 
 G = nx.Graph()
 
