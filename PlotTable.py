@@ -9,8 +9,8 @@ nodes = ["a","b","c","d"]
 vertex = [[1,1,0,1],[1,1,1,1],[0,1,1,1],[1,1,1,1]]
 
 mapa = Grafo()
-a.setNodes(nodes)
-a.setVertex(vertex)
+mapa.setNodes(nodes)
+mapa.setVertex(vertex)
 mapa.colora_node(0)
 
 
@@ -25,6 +25,7 @@ for i in range(0,len(vertex)):
 			G.add_edge(nodes[i],nodes[j])
 
 for i in range(0,len(nodes)):
+	G.node[listaNodes[i]]['color'] = mapa.getColor(i)
 	nx.draw(G,pos,node_size = 1000,nodelist = nodes[i],node_color = color[nodes[i]])
 
 
