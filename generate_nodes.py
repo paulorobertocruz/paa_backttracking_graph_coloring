@@ -21,12 +21,11 @@ def get_number_conection(max_conections):
             number = random.randint(mid_conections, int(max_conections))
     else:
         # 70% menos da metade conexões
-        p = random.randint(1,10)
+
         max_conections = max_conections/2
-        if p > 6:
-            number = random.randint(int(max_conections/2), int(max_conections))
-        else:
-            number = random.randint(1, int(max_conections/2))
+
+        number = random.randint(2, int(max_conections))
+
     return number
 
 def conecta():
@@ -50,6 +49,7 @@ def popula_conection(d = 0):
                 if conecta():
                     nodes[n] = nodes[n] - 1
                     vertex[n][j] = 1
+                    vertex[j][n] = 1
     if max(nodes) > 0:
         if d >10:
             return
