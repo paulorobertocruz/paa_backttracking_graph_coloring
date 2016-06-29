@@ -21,7 +21,7 @@ vertex = grafos.vertex
 if mapa.colora_node(0):
     print("tudo ok")
 else:
-    print("nao deu solução")
+    print("nao deu solucao")
 
 G = nx.Graph()
 
@@ -36,8 +36,8 @@ for i in range(0,len(grafos.vertex)):
 			G.add_edge(grafos.nodes[i],grafos.nodes[j])
 
 for i in range(0,len(grafos.nodes)):
-	G.node[listaNodes[i]]['color'] = mapa.getColor(i)
-	nx.draw(G,pos,node_size = 1000,nodelist = grafos.nodes[i],node_color = color[mapa.getColor(i)])
+	G.node[listaNodes[i]]['color'] = mapa.getCor(i)
+	nx.draw(G,pos,node_size = 1000,nodelist = grafos.nodes[i],node_color = color[mapa.getCor(i)])
 
 
 plt.axis('off')
